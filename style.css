@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #523F44;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #523F44;
+}
+.nav{
+    padding: 10px 50px 5px 50px;
+    background: #F1F1F1;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+}
+.nav img{
+    height: 50px;
+}
+.nav .user h2{
+    font-weight: 600;
+    font-size: 20px;
+    padding-right: 18px;
+    /* color: #523F44; */
+}
+.nav .user p{
+    font-size: 12px;
+} 
+/* .container{
+    position: fixed;
+    margin-top: 65px;
+    width: 375px;
+    height: 450px;
+    background-color: grey;
+    border-radius: 15px;
+    box-shadow: 4px 4px 30px lightgray;
+    padding: 20px;
+    overflow-y: scroll;
+} */
+.container {
+    position: fixed;
+    margin-top: 65px;
+    width: 375px;
+    height: 450px;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px #F1F1F1;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+/* .container .searchbar{
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+    background-color: #792424; 
+    width: 375px;
+} */
+.container .searchbar {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Ensure the search bar is above the book list */
+    width: 375px;
+    padding: 10px;
+    background-color: #F1F1F1;
+}
+
+
+.container .searchbar form{
+    width: 100%;
+    border: 1px solid #523F44;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #E2A165;
+    padding: 5px;
+}
+.container .searchbar form input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 10px;
+    background-color: #E2A165;
+    /* color: #523F44; */
+}
+.container .searchbar form input::placeholder{
+    color: #523F44;
+}
+.container .searchbar form i{
+    padding-left: 10px;
+}
+
+/* .book-list{
+    padding: 20px 0;
+} */
+#book-list {
+    padding: 10px 0 20px 10px; 
+}
+
+.book{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 15px;
+    /* color: #523F44; */
+}
+.book img{
+    width: 70px;
+    height: 85px;
+    border-radius: 2px;
+}
+.book .book-details{
+    padding-left: 15px;
+}
+
+.book .book-details h2{
+    font-size: 20px;
+}
+.book .book-details h3{
+    font-size: 13px;
+    font-weight: 500;
+   /*  color: #523F44; */
+}
+.book .book-details h4{
+    font-size: 11px;
+    font-weight: 400;
+   /*  color: #523F44; */
+}
